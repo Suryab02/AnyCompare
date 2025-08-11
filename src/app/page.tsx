@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { UploadZone } from "@/components/UploadZone";
@@ -74,3 +75,20 @@ export default function Page() {
     </div>
   );
 }
+=======
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+export default function Page() { 
+  const router = useRouter();
+  const isLoggedIn = false; // replace with real auth check
+
+  useEffect(() => {
+    if (isLoggedIn) { 
+        router.push("/compare");
+    } },[isLoggedIn, router]);
+
+  return  <h1 className="text-3xl font-bold underline">
+      Home Page
+    </h1>
+}
+>>>>>>> tst
